@@ -1,0 +1,93 @@
+<div class="cp-address-modal">
+    <div class="cp-address-modal-content">
+        <h2>Buscar Cep</h2>
+        <div class="cp-address-container">
+            <div class="cp-address-row ">
+                <div class="cp-input-floating cp-flex-1">
+                    <select class="cp-select cp-input" cp-model="$ctrl.uf" cp-change="$ctrl.searchCity($newValue)" cp-keypress.enter="$ctrl.focusFirstInputEmpty()">
+                        <option value="AC" selected="selected">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    <label class="form-label cp-address-label" cp-class="{ 'active' : $ctrl.uf }">
+                        ${ params.state }
+                    </label>
+                </div>
+                <div class="cp-input-floating cp-flex-1">
+                    <select class="cp-select cp-input" cp-model="$ctrl.city">
+                        <option cp-repeat="obj in $ctrl.cities">[[obj]]</option>
+                        <option></option>
+                    </select>
+                    <label class="form-label cp-address-label " cp-class="{ 'active' : $ctrl.city }">
+                        ${ params.city }
+                    </label>
+                </div>
+            </div>
+            <div class="cp-address-row ">
+                <div class="cp-input-floating cp-flex-1">
+                    <input cp-model="$ctrl.street" class="cp-input" cp-keyup="$ctrl.inputSearch($event)" type="text">
+                    <label class="form-label cp-address-label " cp-class="{ 'active' : $ctrl.street }">
+                        ${ params.street }
+                    </label>
+                </div>
+            </div>
+            <div class="cp-address-modal-flag" cp-hide="!$ctrl.lookingForAddress">
+                <div class="cp-icon1">
+                    <img src="../docs/icon1.png"></img>
+                </div>
+                <h4>Buscando, aguarde um momento...</h4>
+            </div>
+            <div class="cp-address-modal-flag" cp-hide="!$ctrl.emptyResult">
+                <h4>Nenhum registro encontrado.</h4>
+            </div>
+            <div class="cp-address-row" cp-hide="$ctrl.streets == ''">
+                <div class="cp-input-floating cp-flex-1">
+                    <div class="cp-address-tr-div">
+                        <table class="cp-address-table">
+                            <tr>
+                                <th>
+                                    Bairro
+                                </th>
+                                <th>
+                                    Logradouro
+                                </th>
+                                <th>
+                                    CEP
+                                </th>
+                            </tr>
+                            <tr cp-repeat="obj in $ctrl.streets" class="cp-address-tr" cp-click="$ctrl.select(obj.cep)">
+                                <th class="cp-address-th" cp-class="{ 'stripped' : ($index % 2 == 0) }">[[obj.bairro]]</th>
+                                <th class="cp-address-th" cp-class="{ 'stripped' : ($index % 2 == 0) }">[[obj.logradouro]]</th>
+                                <th class="cp-address-th" cp-class="{ 'stripped' : ($index % 2 == 0) }">[[obj.cep]]</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
