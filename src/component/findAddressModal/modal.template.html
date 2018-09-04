@@ -39,18 +39,18 @@
           </select>
           <label class="form-label cp-address-label"
                  cp-class="{ 'active' : $ctrl.uf }">
-            ${ params.state }
+            [[ $ctrl.params.state ]]
           </label>
         </div>
         <div class="cp-input-floating cp-flex-1">
           <select class="cp-select cp-input"
                   cp-model="$ctrl.city">
-            <option cp-repeat="obj in $ctrl.cities">[[obj]]</option>
+            <option cp-repeat="obj in $ctrl.cities">[[ obj ]]</option>
             <option></option>
           </select>
           <label class="form-label cp-address-label "
                  cp-class="{ 'active' : $ctrl.city }">
-            ${ params.city }
+            [[ $ctrl.params.city ]]
           </label>
         </div>
       </div>
@@ -62,7 +62,7 @@
                  type="text">
           <label class="form-label cp-address-label "
                  cp-class="{ 'active' : $ctrl.street }">
-            ${ params.street }
+            [[ $ctrl.params.street ]]
           </label>
         </div>
       </div>
@@ -97,11 +97,11 @@
                   class="cp-address-tr"
                   cp-click="$ctrl.select(obj.cep)">
                 <th class="cp-address-th"
-                    cp-class="{ 'stripped' : ($index % 2 == 0) }">[[obj.bairro]]</th>
+                    cp-class="{ 'stripped' : ($index % 2 == 0) }">[[ obj.bairro ]]</th>
                 <th class="cp-address-th"
-                    cp-class="{ 'stripped' : ($index % 2 == 0) }">[[obj.logradouro]]</th>
+                    cp-class="{ 'stripped' : ($index % 2 == 0) }">[[ obj.logradouro ]]</th>
                 <th class="cp-address-th"
-                    cp-class="{ 'stripped' : ($index % 2 == 0) }">[[obj.cep]]</th>
+                    cp-class="{ 'stripped' : ($index % 2 == 0) }">[[ obj.cep ]]</th>
               </tr>
             </table>
           </div>

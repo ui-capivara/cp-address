@@ -11,7 +11,7 @@
              type="text">
       <label class="form-label cp-address-label "
              cp-class="{ 'active' : $ctrl.address.cep }">
-        ${ labels.CEP }
+        [[ $ctrl.labels.CEP ]]
       </label>
     </div>
     <div class="cp-address-btn"
@@ -53,9 +53,8 @@
              type="text">
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.streetType }">
-        ${ labels.streetType }
+        [[ $ctrl.labels.streetType ]]
       </label>
-      ${$ctrl.$constants.hiddenStreet}
     </div>
     <div class="cp-input-floating cp-flex-1">
       <input class="cp-input cp-flex-1"
@@ -64,7 +63,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.street }">
-        ${ labels.street }
+        [[ $ctrl.labels.street ]]
       </label>
     </div>
   </div>
@@ -80,7 +79,7 @@
              cp-blur="$ctrl.searchAccuratedCoords()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.number }">
-        ${ labels.number }
+        [[ $ctrl.labels.number ]]
       </label>
     </div>
     <div class="cp-input-floating cp-flex-1"
@@ -91,7 +90,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.information }">
-        ${ labels.information }
+        [[ $ctrl.labels.information ]]
       </label>
     </div>
   </div>
@@ -105,7 +104,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.neighborhood }">
-        ${ labels.neighborhood }
+        [[ $ctrl.labels.neighborhood ]]
       </label>
     </div>
   </div>
@@ -120,7 +119,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.city }">
-        ${ labels.city }
+        [[ $ctrl.labels.city ]]
       </label>
     </div>
     <div class="cp-input-floating cp-flex-1"
@@ -160,7 +159,7 @@
       </select>
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.uf }">
-        ${ labels.state }
+        [[ $ctrl.labels.state ]]
       </label>
     </div>
   </div>
@@ -175,7 +174,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.ibgecode }">
-        ${ labels.ibgecode }
+        [[ $ctrl.labels.ibgecode ]]
       </label>
     </div>
     <div class="cp-input-floating cp-flex-1"
@@ -186,7 +185,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.ufCode }">
-        ${ labels.statecode }
+        [[ $ctrl.labels.statecode ]]
       </label>
     </div>
   </div>
@@ -200,7 +199,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.latitude }">
-        ${ labels.latitude }
+        [[ $ctrl.labels.latitude ]]
       </label>
     </div>
     <div class="cp-input-floating cp-flex-1">
@@ -210,7 +209,7 @@
              cp-keypress.enter="$ctrl.focusFirstInputEmpty()" />
       <label class="form-label cp-address-label"
              cp-class="{ 'active' : $ctrl.address.longitude }">
-        ${ labels.longitude }
+        [[ $ctrl.labels.longitude ]]
       </label>
     </div>
 
